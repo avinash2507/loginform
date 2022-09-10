@@ -2,9 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import InputForm from "./component/InputForm/InputForm";
 import TableComponent from "./component/TableComponent/TableComponent";
-import { StoreContextProvider } from "./Context/ContextProvider";
+import { StoreContext, StoreContextProvider } from "./Context/ContextProvider";
+import { useContext, useEffect } from "react";
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <StoreContextProvider>

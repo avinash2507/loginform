@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../Context/ContextProvider";
 import TextArea from "../TextArea/TextArea";
 import TextInput from "../TextInput/TextInput";
@@ -6,7 +6,11 @@ import styles from "./InputFprm.module.css";
 import { v4 as uuidv4 } from 'uuid';
 
 const InputForm = () => {
-    const  {addUser} = useContext(StoreContext)
+    const  {addUser,getUsers} = useContext(StoreContext)
+
+    useEffect(() => {
+      getUsers();
+    }, [])
 const [userInfo, setUserInfo] = useState({
     firstName:"",
     lastName:"",

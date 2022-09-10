@@ -27,7 +27,7 @@ export const StoreContextProvider = ({ children }) => {
   }
   function getUsers() {
     dispatch({
-      type:'GET_USERS'
+      type:ACTION_TYPE.GET_USERS
     })
   }
 
